@@ -1,0 +1,21 @@
+#set up properties
+management:
+    security:
+        enabled: false
+    endpoint:
+        restart:
+            enabled: true
+
+spring:
+    data:
+        rest: 
+            base-path: /api
+    application:
+        name: beanstalk
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://${DATABASE_HOST:127.0.0.1}:${DATABASE_PORT:3306}/${DATABASE_NAME:mysqlcontainer}?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+        password: ${SECRETS_PASSWORD:tpm1234}
+        username: ${SECRETS_USER:james}
+        schema: classpath:/schema.sql
+        initialization-mode: always
