@@ -27,5 +27,5 @@ spring:
             sql:
                 enabled: true
                 database-type: mysql
-                database-name: mysqlcontainer
-                instance-connection-name: ${PROJECT_ID:qwiklabs-gcp-01-692371d3c27b}:us-central1:mysqlcontainer      
+                database-name: marketplace
+                instance-connection-name: ${PROJECT_ID:qwiklabs-gcp-01-692371d3c27b}:us-central1:mysql-db-container      
