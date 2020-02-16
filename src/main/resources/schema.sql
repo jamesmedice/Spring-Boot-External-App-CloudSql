@@ -1,5 +1,3 @@
-create database IF NOT EXISTS marketplace;
-
 USE marketplace; 
 
 		

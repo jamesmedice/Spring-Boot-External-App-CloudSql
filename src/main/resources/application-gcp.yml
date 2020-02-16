@@ -1,0 +1,8 @@
+spring:
+    cloud:
+        gcp:
+            sql:
+                enabled: true
+                database-type: mysql
+                database-name: marketplace
+                instance-connection-name: ${DEVSHELL_PROJECT_ID:qwiklabs-gcp-03-c2ba3b787460}:us-central1:mysql-db-container 

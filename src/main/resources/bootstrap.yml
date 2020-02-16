@@ -7,25 +7,12 @@ spring:
             name: Cloud
             profile: dev, cloud, mysql
             label: master
-        kubernetes:
-            reload:
-                enabled: true
-            config:
-                enableApi: true
-                enabled: true
-                name: beanstalk
-                namespace: default
-                sources:
-                 - name: secretenv
-            secrets:
-                name: mysqlcontainer
-                namespace: default
         gcp:
-            project-id: ${PROJECT_ID:qwiklabs-gcp-01-692371d3c27b}
+            project-id: ${PROJECT_ID:qwiklabs-gcp-03-c2ba3b787460}
             credentials:
                 location: classpath:key.json
             sql:
                 enabled: true
                 database-type: mysql
                 database-name: marketplace
-                instance-connection-name: ${PROJECT_ID:qwiklabs-gcp-01-692371d3c27b}:us-central1:mysql-db-container      
+                instance-connection-name: ${PROJECT_ID:qwiklabs-gcp-03-c2ba3b787460}:us-central1:mysql-db-container
